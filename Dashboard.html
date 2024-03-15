@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Cloud-based Video Editor</title>
+<link rel="stylesheet" href="Dashboard.css">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+</head>
+<body>
+<div class="container">
+  <div class="sidebar">
+    <select name="Profile" id="Profile">
+        <option value="Profile">Profile</option>
+        <option value="Setting">Setting</option>
+        <option value="Logout">Logout</option>
+    </select>
+    <h2>Menu</h2>
+    <a href="Video1.html">+ New Video</a>
+    <button class="menu-button"><span>&#x1F3E0;</span> Home</button>
+    <button class="menu-button"><span>&#x1F4D6;</span> Templates</button>
+    <button class="menu-button"><span>&#x1F4FA;</span> All Videos</button>
+    <button class="menu-button"><span>&#x1F399;</span> Podcasts</button>
+  </div>
+  <div class="editor">
+      <div class="search-bar">
+        <input type="text" placeholder="Search">
+        <button><i class="fas fa-search"></i></button>
+        <button class="upgrade-button"><i class="fas fa-bolt"></i> Upgrade</button>
+    </div>
+    <p>Let's create some <b>Videos!</b></p>
+    <button class="editor-button"><i class="fas fa-cut"></i> Create Project</button>
+    <button class="editor-button"><i class="fas fa-video"></i> Record Video</button>
+    <button class="editor-button"><i class="fas fa-broadcast-tower"></i> Go Live</button>
+    <button class="editor-button"><i class="fas fa-microphone"></i> Record Podcast</button>
+
+    <div class="video-section">
+        <h2>My Recent Videos</h2>
+        <div class="video-preview">
+            <img src="https://images.pexels.com/photos/4388084/pexels-photo-4388084.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1" alt="Video Preview">
+            <img src="https://images.pexels.com/photos/1588031/pexels-photo-1588031.jpeg?auto=compress&cs=tinysrgb&w=600&lazy=load" alt="Video Preview">
+            <span class="video-time">3:45</span>
+            <span class="video-times">2:39</span>
+        </div>
+    </div>
+    <div class="preview">
+      
+    </div>
+  </div>
+</div>
+<script>
+    document.getElementById("newVideoButton").onclick = function() {
+        window.location.href = "http://127.0.0.1:5500/Dashboard.html";
+    };
+</script>
+</body>
+</html>

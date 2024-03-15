@@ -1,0 +1,234 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Three Sections Layout</title>
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            font-family: Arial, sans-serif;
+            display: flex;
+            flex-direction: row;
+            height: 100vh;
+            flex-wrap: wrap;
+            position: relative;
+        }
+
+        .left-section {
+            background-color: lightblue;
+            flex: 10;
+            padding: 10px;
+            display: flex;
+            flex-direction: column;
+            text-align: center;
+        }
+
+        .center-section {
+            flex: 40;
+            padding: 20px;
+        }
+
+        .center-section select{
+            width: 300px;
+            height: 30px;
+            border-radius: 6px;
+        }
+        .center-section button {
+            width: 300px;
+            height: 30px;
+            padding: 0px;
+            padding-left: 5px;
+            background-color: white;
+            border-radius: 6px;
+        }
+
+        .center-section .background-button span{
+            padding-left: 120px;
+        }
+        .center-section .upload-button span{
+            padding-left: 120px;
+        }
+        .center-section img {
+            width: 20px;
+        }
+
+        .right-section {
+            flex: 50;
+            padding: 20px;
+        }
+
+        .right-section button {
+            margin-left: 500px;
+            padding-top: 5px;
+            display: flex;
+            background-color: #fff;
+            border-radius: 6px;
+        }
+
+        .right-section img {
+            width: 20px;
+        }
+
+        .right-section .image img {
+            width: 550px;
+            height: 350px;
+            padding-top: 40px;
+        }
+
+        .tool-button {
+            margin-bottom: 10px;
+            padding: 10px;
+            background-color: #f8f9fa;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+
+        .tool-button img {
+            width: 30px;
+            height: 30px;
+            margin-bottom: 5px;
+        }
+
+        .footer {
+            display: flex;
+            justify-content: flex-start;
+            align-items: center;
+            background-color: white;
+            color: black;
+            padding: 10px 20px;
+            width: 100%;
+            position: absolute;
+            bottom: 0;
+            flex-wrap: wrap;
+            flex-direction: row;
+            text-align: center;
+        }
+
+        .footer button {
+            padding: 5px 15px;
+            background-color: rgb(163, 244, 220);
+            color: black;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            margin-right: 10px;
+            width: 180px;
+        }
+
+        .footer .image-box {
+            display: flex;
+            margin-top: 20px;
+            width: 40%;
+            height: 100px;
+            background-color: lightgray;
+}
+        .footer .image-box img {
+            height: 100px;
+            width: 105px;
+            
+        }
+        .footer img {
+
+            width: 20px;
+        }
+
+        .footer .volume-symbol img{
+            width: 60px;
+        }
+        .clean-audio-button {
+            display: flex;
+            margin-bottom: 10px;
+            padding: 10px;
+            background-color: white;
+            border-radius: 5px;
+            cursor: pointer;
+            border: 1px solid black;
+            width: 300px;
+            height: 40px;
+        }
+        .clean-audio-button img {
+            width: 30px;
+            height: 30px;
+            margin-right: 5px;
+        }
+    </style>
+</head>
+<body>
+    <div class="left-section">
+        <button class="tool-button"><img src="https://tse1.mm.bing.net/th?id=OIP.vmfp00jCxikITf8u1Io14AHaGu&pid=Api&P=0&h=180" alt="Settings"><br>Settings</button>
+        <button class="tool-button"><img src="https://tse2.mm.bing.net/th?id=OIP.JIo_erHjGUXp0-Z86gJAqAHaHa&pid=Api&P=0&h=180" alt="Media"><br>Media</button>
+        <button class="tool-button"><img src="https://tse3.mm.bing.net/th?id=OIP.UpI8AkLZGeqzvfCWXoDbEwHaEH&pid=Api&P=0&h=180" alt="Audio"><br>Audio</button>
+        <button class="tool-button"><img src="https://tse4.mm.bing.net/th?id=OIP.HsEJ_CQ7lcJfNFjHGRONUAHaHa&pid=Api&P=0&h=180" alt="Subtitles"><br>Subtitles</button>
+        <button class="tool-button"><img src="https://tse4.mm.bing.net/th?id=OIP.u6qQD-R44Cm_WCckqasoYQHaHa&pid=Api&P=0&h=180" alt="Text"><br>Text</button>
+        <button class="tool-button"><img src="https://tse4.mm.bing.net/th?id=OIP.BqtPGYpNnug0kl3nbN30TwHaHa&pid=Api&P=0&h=180" alt="Templates"><br>Templates</button>
+    </div>
+
+    <div class="center-section">
+        <h3>Project Settings</h3>
+        <p>Size:</p>
+        <select name="size" id="size">
+            <option value="original">Original (4:3)</option>
+            <option value="square">Square</option>
+            <option value="16:9">16:9</option>
+        </select><br><br>
+        <h3>Background</h3>
+        <button class="background-button"><i class="bullet">&#9675;</i> Color <span class="color-code">#ff0000 <img src="https://tse1.mm.bing.net/th?id=OIP.K1eplcxv1SapZOKIzcrPTQHaGz&pid=Api&P=0&h=180" alt="Color Can"></span></button>
+
+        <button class="upload-button"><i class="bullet">&#9675;</i> Image <span>Upload</span> <img class="upload-symbol" src="https://tse4.mm.bing.net/th?id=OIP.R5VaYQoinOYzhyUnc-BMAAHaHa&pid=Api&P=0&h=180" alt="Upload Symbol"></button>
+
+        
+        <h3>Audio</h3>
+        <div class="clean-audio-button">
+            <img src="https://tse3.mm.bing.net/th?id=OIP.6X-vn6yQjAT4348A4c8tTwHaHa&pid=Api&P=0&h=180" alt="Upgrade Symbol">Clean Audio <span style="color: rgb(164, 162, 162);">Remove background audio</span>
+        </div>
+
+        <div class="footer">
+            <button><img src="https://tse3.mm.bing.net/th?id=OIP.gGmOnSlXWqN1GAP2FwZOSgHaF1&pid=Api&P=0&h=180" alt="Split"> Split</button>
+            <button><img src="https://tse4.mm.bing.net/th?id=OIP.JnQBUvWIPLcux3PVpmX5kgHaHa&pid=Api&P=0&h=180" alt="Add Media"> Add Media</button>
+            <button><img src="https://tse4.mm.bing.net/th?id=OIP.0khgQnHyyOXUJfBOz2EjwAHaHa&pid=Api&P=0&h=180" alt="Voiceover"> Voiceover</button>
+
+            <div class="time-scale">
+                <span>00:00</span> 
+                <span>--------------------</span> 
+                <span>10:00</span> 
+            </div>
+            <div class="volume-symbol" style="padding-left: 40px" style="height: 50px">
+                <img src="https://static.thenounproject.com/png/267323-200.png" alt="Volume">
+            </div>
+            <div class="image-box">
+                <img src="https://images.pexels.com/photos/4388084/pexels-photo-4388084.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1" alt="Image Description">
+                <img src="https://images.pexels.com/photos/4388084/pexels-photo-4388084.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1" alt="Image Description">
+                <img src="https://images.pexels.com/photos/4388084/pexels-photo-4388084.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1" alt="Image Description">
+                <img src="https://images.pexels.com/photos/4388084/pexels-photo-4388084.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1" alt="Image Description">
+                <img src="https://images.pexels.com/photos/4388084/pexels-photo-4388084.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1" alt="Image Description">
+                <img src="https://images.pexels.com/photos/4388084/pexels-photo-4388084.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1" alt="Image Description">
+                <img src="https://images.pexels.com/photos/4388084/pexels-photo-4388084.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1" alt="Image Description">
+                <img src="https://images.pexels.com/photos/4388084/pexels-photo-4388084.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1" alt="Image Description">
+                <img src="https://images.pexels.com/photos/4388084/pexels-photo-4388084.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1" alt="Image Description">
+                <img src="https://images.pexels.com/photos/4388084/pexels-photo-4388084.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1" alt="Image Description">
+                
+            </div>
+        </div>
+    </div>
+
+    <div class="right-section">
+        <div>
+            <span class="project-name">Project Name</span>
+            <span class="arrows">&#8592; &#8594;</span>
+        </div>
+        <button class="done-button">Done <img class="upload-symbol" src="https://tse1.mm.bing.net/th?id=OIP.ng55CLqqFRA7NJm2GDd8AwHaHa&pid=Api&P=0&h=180" alt="Right Symbol"></button>
+        <div class="image">
+            <img src="https://images.pexels.com/photos/4388084/pexels-photo-4388084.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1" alt="Video Preview">
+
+        </div>
+        
+    </div>
+
+
+</body>
+
+</html>
